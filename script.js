@@ -91,6 +91,10 @@ class Component {
                 this.pins[0] = this.breadboard.getNearestHole(this.x, this.y - 40);
                 this.pins[1] = this.breadboard.getNearestHole(this.x, this.y + 40);
                 break;
+            case 'battery':
+                this.pins[0] = this.breadboard.getNearestHole(this.x - 20, this.y);
+                this.pins[1] = this.breadboard.getNearestHole(this.x + 20, this.y);
+                break;
             default:
                 this.pins = [];
         }
@@ -117,6 +121,12 @@ class Component {
                 x2 = this.x;
                 y2 = this.y + 40;
                 break;
+            case 'capacitor':
+                    x1 = this.x - 20;
+                    y1 = this.y;
+                    x2 = this.x + 20;
+                    y2 = this.y;
+                    break;
             default:
                 this.connectionPoints = [];
                 return;
