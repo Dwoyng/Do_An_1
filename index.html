@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Side Toolbar -->
+    <div class="side-toolbar">
+        <div style="display: flex;">
+        <button id="toggle-toolbar">☰</button>
+        <img style =" width: 35px" src="ase_lab_img.jpg" alt="">
+    </div>
+    <div class="toolbar-content">
+        <input type="text" id="search" placeholder="Search components..." />
+        <ul style="display: flex;" id="component-list">
+            <li data-type="resistor">
+                <img src="assets/components/resistor.svg" alt="" />
+                resistor
+            </li>
+            <li data-type="led">
+                <img src="assets/components/led.svg" alt="" />
+                LED
+            </li>
+            <li data-type="battery">
+                <img src="assets/components/battery.svg" alt="" />
+                Battery
+            </li>
+            
+            
+        </ul>
+    </div>
+    </div>
+
+    
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
