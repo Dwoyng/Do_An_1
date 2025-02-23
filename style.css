@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+canvas {
+    border: 1px solid #000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 260px;  /*Remove margin */
+}
+
+/* Side Toolbar */
+.side-toolbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #65b8cd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    display: flex; /* Thêm flexbox để sắp xếp header và content */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+}
+
+.side-toolbar.collapsed {
+    width: 50px;
+}
+
+.side-toolbar.collapsed .toolbar-content {
+    display: none;
+}
+
+.side-toolbar.collapsed .toolbar-header .logo {
+    display: none; /* Ẩn logo khi toolbar thu gọn */
+}
+
+#toggle-toolbar {
+    background-color: #2272b9;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+/* Toolbar Header */
+.side-toolbar .toolbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    /*flex-shrink: 0;  Ngăn header co lại */
+}
+
+.side-toolbar .toolbar-header .logo {
+    width: 46.5px; /* Điều chỉnh kích thước logo */
+    height: auto;
+    margin-right: 5px; /* Tạo khoảng cách với nút toggle */
+}
+
+.toolbar-content {
+    padding: 10px;
+    /*flex-grow: 1; Cho phép content chiếm không gian còn lại */
+}
+
+#search {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#component-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+#component-list li {
+    width: calc(100% / 3 - 10px);
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#component-list li img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#component-list li:hover {
+    background-color: #007bff;
+    color: white;
+}

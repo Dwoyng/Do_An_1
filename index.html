@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Side Toolbar -->
+    <div class="side-toolbar">
+        <div class="toolbar-header">
+            <button id="toggle-toolbar">☰</button>
+            <img class="logo" src="assets/icons/ase_lab_img.jpg" alt="ASE Lab Logo">
+        </div>
+        <div class="toolbar-content">
+            <input type="text" id="search" placeholder="Search components..." />
+            <ul id="component-list">
+                <li data-type="resistor">
+                    <img src="assets/components/resistor.svg" alt="Resistor" />
+                    Resistor
+                </li>
+                <li data-type="led">
+                    <img src="assets/components/led.svg" alt="LED" />
+                    LED
+                </li>
+                <li data-type="voltage source">
+                    <img src="assets/components/voltage source.svg" alt="voltage source" />
+                    Voltage Source
+                </li>
+                <li data-type="capacitor">
+                    <img src="assets/components/capacitor.svg" alt="Capacitor"/>
+                    Capacitor
+                </li>
+                <li data-type="inductor">
+                    <img src="assets/components/inductor.svg" alt="Inductor"  />
+                    Inductor
+                </li>
+                <li data-type="diode">
+                    <img src="assets/components/diode.svg" alt="Diode"  />
+                    Diode
+                </li>
+                <li data-type="transistor">
+                    <img src="assets/components/transistor.svg" alt="Transistor"  />
+                    Transistor
+                </li>
+                <li data-type="current source">
+                    <img src="assets/components/current source.svg" alt="Current Source"/>
+                    Current Source
+                </li>
+                <li data-type="breadboard">
+                    <img src="assets/components/bread board.svg" alt="Breadboard" />
+                    Breadboard
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="canvas" width="1300" height="725"></canvas>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
